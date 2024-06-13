@@ -1,0 +1,8 @@
+<!-- contacto-list.component.html -->
+<div *ngIf="contactos">
+  <ul>
+    <li *ngFor="let contacto of contactos">
+      {{ contacto.nombre }} {{ contacto.apellido }}
+    </li>
+  </ul>
+</div>

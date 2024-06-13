@@ -1,0 +1,32 @@
+<!-- src/app/app.component.html -->
+<div class="container">
+  <h1>Gestión de Contactsssos</h1>
+
+  <!-- contacto-create.component.html -->
+  <form (submit)="crearContacto()">
+    <input
+      type="text"
+      [(ngModel)]="nombre"
+      name="nombre"
+      placeholder="Nombre"
+      required
+    />
+    <input
+      type="text"
+      [(ngModel)]="apellido"
+      name="apellido"
+      placeholder="Apellido"
+      required
+    />
+    <button type="submit">Crear Contacto</button>
+  </form>
+
+  <!-- contacto-list.component.html -->
+  <div *ngIf="contactos">
+    <ul>
+      <li *ngFor="let contacto of contactos">
+        {{ contacto.nombre }} {{ contacto.apellido }}
+      </li>
+    </ul>
+  </div>
+</div>
