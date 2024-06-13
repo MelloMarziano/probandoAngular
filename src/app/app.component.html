@@ -1,12 +1,10 @@
 <!-- src/app/app.component.html -->
 <div class="container">
   <h1>Gestión de Contactsssos</h1>
-  <br />
-  <br />
   <!-- contacto-create.component.html -->
   <form (submit)="crearContacto()">
     <div class="row">
-      <div class="col">
+      <div class="col-12 col-sm-6 mt-4">
         <input
           type="text"
           [(ngModel)]="nombre"
@@ -16,10 +14,7 @@
           class="form-control"
         />
       </div>
-    </div>
-    <br />
-    <div class="row">
-      <div class="col">
+      <div class="col-12 col-sm-6 mt-4">
         <input
           type="text"
           [(ngModel)]="apellido"
@@ -30,15 +25,15 @@
         />
       </div>
     </div>
+
     <br />
-    <br />
-    <div class="row d-flex justify-content-center">
-      <div class="col">
+    <div class="row">
+      <div class="col d-flex justify-content-center align-items-center">
         <button class="btn btn-primary" type="submit">Crear Contacto</button>
       </div>
     </div>
   </form>
-
+  <br />
   <!-- contacto-list.component.html -->
   <div *ngIf="contactos">
     <ol>
